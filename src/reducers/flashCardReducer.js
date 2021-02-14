@@ -1,4 +1,3 @@
-//import { combineReducers } from "redux";
 import { FLASHCARD_CREATED } from "../constants/flashcard";
 
 const initialState = {
@@ -9,7 +8,7 @@ const initialState = {
   created: false,
 };
 
-const mainReducer = (state = initialState, action) => {
+const flashCardReducer = (state = initialState, action) => {
   console.log(state);
   console.log(action.payload);
   switch (action.type) {
@@ -23,5 +22,5 @@ const mainReducer = (state = initialState, action) => {
       return state;
   }
 };
-// console.log(mainReducer);
-export { mainReducer };
+
+export { flashCardReducer };

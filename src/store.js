@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import { mainReducer } from "./reducers/mainReducer";
+import { flashCardReducer } from "./reducers/flashCardReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
@@ -8,7 +8,7 @@ import thunk from "redux-thunk";
 const middleware = [thunk];
 
 const store = createStore(
-  mainReducer,
+  flashCardReducer,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 
